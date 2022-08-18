@@ -32,6 +32,10 @@
             this.plusMinusButton = new System.Windows.Forms.Button();
             this.decimalButton = new System.Windows.Forms.Button();
             this.equalButton = new System.Windows.Forms.Button();
+            this.oneButton = new System.Windows.Forms.Button();
+            this.twoButton = new System.Windows.Forms.Button();
+            this.threeButton = new System.Windows.Forms.Button();
+            this.plusButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // zeroButton
@@ -83,11 +87,63 @@
             this.equalButton.Text = "=";
             this.equalButton.UseVisualStyleBackColor = true;
             // 
+            // oneButton
+            // 
+            this.oneButton.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.oneButton.Location = new System.Drawing.Point(12, 532);
+            this.oneButton.MinimumSize = new System.Drawing.Size(158, 114);
+            this.oneButton.Name = "oneButton";
+            this.oneButton.Padding = new System.Windows.Forms.Padding(1);
+            this.oneButton.Size = new System.Drawing.Size(158, 114);
+            this.oneButton.TabIndex = 4;
+            this.oneButton.Text = "1";
+            this.oneButton.UseVisualStyleBackColor = true;
+            // 
+            // twoButton
+            // 
+            this.twoButton.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.twoButton.Location = new System.Drawing.Point(176, 532);
+            this.twoButton.MinimumSize = new System.Drawing.Size(158, 114);
+            this.twoButton.Name = "twoButton";
+            this.twoButton.Padding = new System.Windows.Forms.Padding(1);
+            this.twoButton.Size = new System.Drawing.Size(158, 114);
+            this.twoButton.TabIndex = 5;
+            this.twoButton.Text = "2";
+            this.twoButton.UseVisualStyleBackColor = true;
+            // 
+            // threeButton
+            // 
+            this.threeButton.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.threeButton.Location = new System.Drawing.Point(340, 532);
+            this.threeButton.MinimumSize = new System.Drawing.Size(158, 114);
+            this.threeButton.Name = "threeButton";
+            this.threeButton.Padding = new System.Windows.Forms.Padding(1);
+            this.threeButton.Size = new System.Drawing.Size(158, 114);
+            this.threeButton.TabIndex = 6;
+            this.threeButton.Text = "3";
+            this.threeButton.UseVisualStyleBackColor = true;
+            // 
+            // plusButton
+            // 
+            this.plusButton.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.plusButton.Location = new System.Drawing.Point(504, 532);
+            this.plusButton.MinimumSize = new System.Drawing.Size(158, 114);
+            this.plusButton.Name = "plusButton";
+            this.plusButton.Padding = new System.Windows.Forms.Padding(1);
+            this.plusButton.Size = new System.Drawing.Size(158, 114);
+            this.plusButton.TabIndex = 7;
+            this.plusButton.Text = "+";
+            this.plusButton.UseVisualStyleBackColor = true;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 778);
+            this.Controls.Add(this.plusButton);
+            this.Controls.Add(this.threeButton);
+            this.Controls.Add(this.twoButton);
+            this.Controls.Add(this.oneButton);
             this.Controls.Add(this.equalButton);
             this.Controls.Add(this.decimalButton);
             this.Controls.Add(this.plusMinusButton);
@@ -107,5 +163,9 @@
         private Button plusMinusButton;
         private Button decimalButton;
         private Button equalButton;
+        private Button oneButton;
+        private Button twoButton;
+        private Button threeButton;
+        private Button plusButton;
     }
 }
