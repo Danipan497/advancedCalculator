@@ -12,6 +12,13 @@ namespace advancedCalculator
 {
     public partial class Calculator : Form
     {
+
+        string first = "";
+        string second = "";
+        char function;
+        double result = 0.0;
+        string userInput = "";
+
         private Rectangle zeroButtonOriginalRectangle;
         private Rectangle plusMinusButtonOriginalRectangle;
         private Rectangle decimalButtonOriginalRectangle;
@@ -20,6 +27,19 @@ namespace advancedCalculator
         private Rectangle twoButtonOriginalRectangle;
         private Rectangle threeButtonOriginalRectangle;
         private Rectangle plusButtonOriginalRectangle;
+        private Rectangle fourButtonOriginalRectangle;
+        private Rectangle fiveButtonOriginalRectangle;
+        private Rectangle sixButtonOriginalRectangle;
+        private Rectangle minusButtonOriginalRectangle;
+        private Rectangle sevenButtonOriginalRectangle;
+        private Rectangle eightButtonOriginalRectangle;
+        private Rectangle nineButtonOriginalRectangle;
+        private Rectangle multiplyButtonOriginalRectangle;
+        private Rectangle squareRootButtonOriginalRectangle;
+        private Rectangle clearButtonOriginalRectangle;
+        private Rectangle backspaceButtonOriginalRectangle;
+        private Rectangle divideButtonOriginalRectangle;
+        private Rectangle displayLabelOriginalRectangle;
         private Size originalFormSize;
         public Calculator()
         {
@@ -37,6 +57,19 @@ namespace advancedCalculator
             twoButtonOriginalRectangle = new Rectangle(twoButton.Location.X, twoButton.Location.Y, twoButton.Width, twoButton.Height);
             threeButtonOriginalRectangle = new Rectangle(threeButton.Location.X, threeButton.Location.Y, threeButton.Width, threeButton.Height);
             plusButtonOriginalRectangle = new Rectangle(plusButton.Location.X, plusButton.Location.Y, plusButton.Width, plusButton.Height);
+            fourButtonOriginalRectangle = new Rectangle(fourButton.Location.X, fourButton.Location.Y, fourButton.Width, fourButton.Height);
+            fiveButtonOriginalRectangle = new Rectangle(fiveButton.Location.X, fiveButton.Location.Y, fiveButton.Width, fiveButton.Height);
+            sixButtonOriginalRectangle = new Rectangle(sixButton.Location.X, sixButton.Location.Y, sixButton.Width, sixButton.Height);
+            minusButtonOriginalRectangle = new Rectangle(minusButton.Location.X, minusButton.Location.Y, minusButton.Width, minusButton.Height);
+            sevenButtonOriginalRectangle = new Rectangle(sevenButton.Location.X, sevenButton.Location.Y, sevenButton.Width, sevenButton.Height);
+            eightButtonOriginalRectangle = new Rectangle(eightButton.Location.X, eightButton.Location.Y, eightButton.Width, eightButton.Height);
+            nineButtonOriginalRectangle = new Rectangle(nineButton.Location.X, nineButton.Location.Y, nineButton.Width, nineButton.Height);
+            multiplyButtonOriginalRectangle = new Rectangle(multiplyButton.Location.X, multiplyButton.Location.Y, multiplyButton.Width, multiplyButton.Height);
+            squareRootButtonOriginalRectangle = new Rectangle(squareRootButton.Location.X, squareRootButton.Location.Y, squareRootButton.Width, squareRootButton.Height);
+            clearButtonOriginalRectangle = new Rectangle(clearButton.Location.X, clearButton.Location.Y, clearButton.Width, clearButton.Height);
+            backspaceButtonOriginalRectangle = new Rectangle(backspaceButton.Location.X, backspaceButton.Location.Y, backspaceButton.Width, backspaceButton.Height);
+            divideButtonOriginalRectangle = new Rectangle(divideButton.Location.X, divideButton.Location.Y, divideButton.Width, divideButton.Height);
+            displayLabelOriginalRectangle = new Rectangle(displayLabel.Location.X, displayLabel.Location.Y, displayLabel.Width, displayLabel.Height);
         }
 
         private void Calculator_Resize(object sender, EventArgs e)
@@ -49,6 +82,19 @@ namespace advancedCalculator
             resizeControl(twoButtonOriginalRectangle, twoButton);
             resizeControl(threeButtonOriginalRectangle, threeButton);
             resizeControl(plusButtonOriginalRectangle, plusButton);
+            resizeControl(fourButtonOriginalRectangle, fourButton);
+            resizeControl(fiveButtonOriginalRectangle, fiveButton);
+            resizeControl(sixButtonOriginalRectangle, sixButton);
+            resizeControl(minusButtonOriginalRectangle, minusButton);
+            resizeControl(sevenButtonOriginalRectangle, sevenButton);
+            resizeControl(eightButtonOriginalRectangle, eightButton);
+            resizeControl(nineButtonOriginalRectangle, nineButton);
+            resizeControl(multiplyButtonOriginalRectangle, multiplyButton);
+            resizeControl(squareRootButtonOriginalRectangle, squareRootButton);
+            resizeControl(clearButtonOriginalRectangle, clearButton);
+            resizeControl(backspaceButtonOriginalRectangle, backspaceButton);
+            resizeControl(divideButtonOriginalRectangle, divideButton);
+            resizeControl(displayLabelOriginalRectangle, displayLabel);
         }
         private void resizeControl(Rectangle OriginalControlRect, Control control)
         {
@@ -64,8 +110,190 @@ namespace advancedCalculator
             control.Location = new Point(newXPosition, newYPosition);
             control.Size = new Size(newWidth, newHeight);
         }
+        private void plusMinusButton_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void zeroButton_Click(object sender, EventArgs e)
+        {
+            displayLabel.Text = "";
+            userInput += "0";
+            displayLabel.Text += userInput;
+        }
+
+        private void decimalButton_Click(object sender, EventArgs e)
+        {
+            displayLabel.Text += ".";
+        }
+
+        private void equalButton_Click(object sender, EventArgs e)
+        {
+            second = userInput;
+            double firstNum, secondNum;
+            firstNum = Convert.ToDouble(first);
+            secondNum = Convert.ToDouble(second);
+
+            //Plus
+            if (function == '+')
+            {
+                result = firstNum + secondNum;
+                displayLabel.Text = result.ToString();
+            }
+
+            //Minus
+            else if (function == '-')
+            {
+                result = firstNum - secondNum;
+                displayLabel.Text = result.ToString();
+            }
+
+            //Multiply
+            else if (function == '*')
+            {
+                result = firstNum * secondNum;
+                displayLabel.Text = result.ToString();
+            }
+
+            //Divide
+            else if (function == '/')
+            {
+                if (secondNum == 0 )
+                {
+                    displayLabel.Text = "Division by zero restricted.";
+                }
+                else
+                {
+                    result = firstNum / secondNum;
+                    displayLabel.Text = result.ToString();
+                }
+            }
+        }
+
+        private void oneButton_Click(object sender, EventArgs e)
+        {
+            displayLabel.Text = "";
+            userInput += "1";
+            displayLabel.Text += userInput;
+        }
+
+        private void twoButton_Click(object sender, EventArgs e)
+        {
+            displayLabel.Text = "";
+            userInput += "2";
+            displayLabel.Text += userInput;
+        }
+
+        private void threeButton_Click(object sender, EventArgs e)
+        {
+            displayLabel.Text = "";
+            userInput += "3";
+            displayLabel.Text += userInput;
+        }
+
+        private void plusButton_Click(object sender, EventArgs e)
+        {
+            function = '+';
+            first = userInput;
+            userInput = "";
+        }
+
+        private void fourButton_Click(object sender, EventArgs e)
+        {
+            displayLabel.Text = "";
+            userInput += "4";
+            displayLabel.Text += userInput;
+        }
+
+        private void fiveButton_Click(object sender, EventArgs e)
+        {
+            displayLabel.Text = "";
+            userInput += "5";
+            displayLabel.Text += userInput;
+        }
+
+        private void sixButton_Click(object sender, EventArgs e)
+        {
+            displayLabel.Text = "";
+            userInput += "6";
+            displayLabel.Text += userInput;
+        }
+
+        private void minusButton_Click(object sender, EventArgs e)
+        {
+            function = '-';
+            first = userInput;
+            userInput = "";
+        }
+
+        private void sevenButton_Click(object sender, EventArgs e)
+        {
+            displayLabel.Text = "";
+            userInput += "7";
+            displayLabel.Text += userInput;
+        }
+
+        private void eightButton_Click(object sender, EventArgs e)
+        {
+            displayLabel.Text = "";
+            userInput += "8";
+            displayLabel.Text += userInput;
+        }
+
+        private void nineButton_Click(object sender, EventArgs e)
+        {
+            displayLabel.Text = "";
+            userInput += "9";
+            displayLabel.Text += userInput;
+        }
+
+        private void multiplyButton_Click(object sender, EventArgs e)
+        {
+            function = '*';
+            first = userInput;
+            userInput = "";
+        }
+
+        private void squareRootButton_Click(object sender, EventArgs e)
+        {
+            function = '$';
+            first = userInput;
+            userInput = "";
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            first = "";
+            second = "";
+            userInput = "";
+            result = 0.0;
+            displayLabel.Text = "0";
+        }
+
+        private void backspaceButton_Click(object sender, EventArgs e)
+        {
+            if (displayLabel.Text.Length != 0)
+            {
+                displayLabel.Text = displayLabel.Text.Remove(displayLabel.Text.Length - 1, 1);
+                string updatedDisplayLabel = displayLabel.Text;
+                userInput = updatedDisplayLabel;
+            }
+            else
+            {
+                return;
+            }
+            userInput += "";
+
+        }
+
+        private void divideButton_Click(object sender, EventArgs e)
+        {
+            function = '/';
+            first = userInput;
+            userInput = "";
+        }
+
+        private void displayLabel_Click(object sender, EventArgs e)
         {
 
         }
