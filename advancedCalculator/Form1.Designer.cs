@@ -356,6 +356,7 @@
             this.Load += new System.EventHandler(this.Calculator_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyUp);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Calculator_PreviewKeyDown);
             this.Resize += new System.EventHandler(this.Calculator_Resize);
             this.ResumeLayout(false);
 

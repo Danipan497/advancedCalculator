@@ -38,6 +38,7 @@ namespace advancedCalculator
         public Calculator()
         {
             InitializeComponent();
+            this.KeyPreview = true;
         }
 
         private void Calculator_Load(object sender, EventArgs e)
@@ -301,10 +302,22 @@ namespace advancedCalculator
         {
 
         }
+
+        private void Calculator_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+
+        }
+
         private void Calculator_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
+                case Keys.NumPad0:
+                    zeroButton.PerformClick();
+                    break;
+                case Keys.D0:
+                    zeroButton.PerformClick();
+                    break;
                 case Keys.NumPad1:
                     oneButton.PerformClick();
                     break;
