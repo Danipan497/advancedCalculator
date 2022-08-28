@@ -301,5 +301,91 @@ namespace advancedCalculator
         {
 
         }
+        private void Calculator_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.NumPad1:
+                    oneButton.PerformClick();
+                    break;
+                case Keys.D1:
+                    oneButton.PerformClick();
+                    break;
+                case Keys.NumPad2:
+                    twoButton.PerformClick();
+                    break;
+                case Keys.D2:
+                    twoButton.PerformClick();
+                    break;
+                case Keys.NumPad3:
+                    threeButton.PerformClick();
+                    break;
+                case Keys.D3:
+                    threeButton.PerformClick();
+                    break;
+                case Keys.NumPad4:
+                    fourButton.PerformClick();
+                    break;
+                case Keys.D4:
+                    fourButton.PerformClick();
+                    break;
+                case Keys.NumPad5:
+                    fiveButton.PerformClick();
+                    break;
+                case Keys.D5:
+                    fiveButton.PerformClick();
+                    break;
+                case Keys.NumPad6:
+                    sixButton.PerformClick();
+                    break;
+                case Keys.D6:
+                    sixButton.PerformClick();
+                    break;
+                case Keys.NumPad7:
+                    sevenButton.PerformClick();
+                    break;
+                case Keys.D7:
+                    sevenButton.PerformClick();
+                    break;
+                case Keys.NumPad8:
+                    eightButton.PerformClick();
+                    break;
+                case Keys.D8:
+                    eightButton.PerformClick();
+                    break;
+                case Keys.NumPad9:
+                    nineButton.PerformClick();
+                    break;
+                case Keys.D9:
+                    nineButton.PerformClick();
+                    break;
+                case Keys.Add:
+                    plusButton.PerformClick();
+                    break;
+                case Keys.Subtract:
+                    minusButton.PerformClick();
+                    break;
+                case Keys.Multiply:
+                    multiplyButton.PerformClick();
+                    break;
+                case Keys.Divide:
+                    divideButton.PerformClick();
+                    break;
+                default:
+                    break;
+            }
+        }
+        private void Calculator_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Enter:
+                    equalButton.PerformClick();
+                    break;
+                default:
+                    break;
+
+            }
+        }
     }
 }
