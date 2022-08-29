@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace advancedCalculator
 {
+    //Buttons (as rectangles) declarations method. 
+
     public partial class Calculator : Form
     {
         private Rectangle zeroButtonOriginalRectangle;
@@ -41,6 +43,8 @@ namespace advancedCalculator
             this.KeyPreview = true;
         }
 
+        //Storage of general rectangle parameteres (buttons).
+
         private void Calculator_Load(object sender, EventArgs e)
         {
             originalFormSize = this.Size;
@@ -67,6 +71,7 @@ namespace advancedCalculator
             displayLabelOriginalRectangle = new Rectangle(displayLabel.Location.X, displayLabel.Location.Y, displayLabel.Width, displayLabel.Height);
         }
 
+        //Rectangle resize method.
         private void Calculator_Resize(object sender, EventArgs e)
         {
             resizeControl(zeroButtonOriginalRectangle, zeroButton);
@@ -91,6 +96,8 @@ namespace advancedCalculator
             resizeControl(backspaceButtonOriginalRectangle, backspaceButton);
             resizeControl(displayLabelOriginalRectangle, displayLabel);
         }
+
+        //Resize equations.
         private void resizeControl(Rectangle OriginalControlRect, Control control)
         {
             float xAxis = (float)(this.Width) / (float)(originalFormSize.Width);
@@ -106,10 +113,13 @@ namespace advancedCalculator
             control.Size = new Size(newWidth, newHeight);
         }
 
+        //Variables declaration.
+
         float num1, num2, result;
         char operation;
         bool dec = false;
 
+        //Counting method.
         private void changeLabel(int numPressed)
         {
             if (dec == true)
@@ -130,7 +140,7 @@ namespace advancedCalculator
             }
             else
             {
-                if (displayLabel.Text.Equals("0") == true&& displayLabel.Text != null)
+                if (displayLabel.Text.Equals("0") == true && displayLabel.Text != null)
                 {
                     displayLabel.Text = numPressed.ToString();
                 }
@@ -145,6 +155,7 @@ namespace advancedCalculator
             }
         }
 
+        //All buttons declarations.
 
         private void zeroButton_Click(object sender, EventArgs e)
         {
@@ -198,7 +209,6 @@ namespace advancedCalculator
         {
             num1 = float.Parse(displayLabel.Text);
             operation = '+';
-            result += num1;
             displayLabel.Text = "";
         }
 
@@ -206,7 +216,6 @@ namespace advancedCalculator
         {
             num1 = float.Parse(displayLabel.Text);
             operation = '-';
-            result -= num1;
             displayLabel.Text = "";
         }
 
@@ -214,14 +223,12 @@ namespace advancedCalculator
         {
             num1 = float.Parse(displayLabel.Text);
             operation = '*';
-            result *= num1;
             displayLabel.Text = "";
         }
         private void divideButton_Click(object sender, EventArgs e)
         {
             num1 = float.Parse(displayLabel.Text);
             operation = '/';
-            result /= num1;
             displayLabel.Text = "";
         }
 
@@ -308,6 +315,7 @@ namespace advancedCalculator
 
         }
 
+        //Keyboard control.
         private void Calculator_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
