@@ -127,14 +127,14 @@ namespace advancedCalculator
                 int decimalCount = 0;
                 foreach(char c in displayLabel.Text)
                 {
-                    if (c == '.')
+                    if (c == ',')
                     {
                         decimalCount++;
                     }
                 }
                 if (decimalCount < 1)
                 {
-                    displayLabel.Text = displayLabel.Text + ".";
+                    displayLabel.Text = displayLabel.Text + ",";
                 }
                 dec = false;
             }
@@ -277,8 +277,15 @@ namespace advancedCalculator
 
         private void decimalButton_Click(object sender, EventArgs e)
         {
-            dec = true;
-            changeLabel(10);
+            if (displayLabel.Text.Contains(','))
+            {
+                displayLabel.Text = result.ToString();
+            }
+            else
+            {
+                dec = true;
+                changeLabel(10);
+            }
         }
 
         private void clearButton_Click(object sender, EventArgs e)
