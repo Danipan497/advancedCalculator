@@ -118,6 +118,7 @@ namespace advancedCalculator
         float num1, num2, result;
         char operation;
         bool dec = false;
+        private int stringLength;
 
         //Counting method.
         private void changeLabel(int numPressed)
@@ -243,7 +244,19 @@ namespace advancedCalculator
         }
         private void plusMinusButton_Click(object sender, EventArgs e)
         {
-            displayLabel.Text = "-" + displayLabel.Text;
+            int stringLenght = displayLabel.Text.Length;
+            if (displayLabel.Text.Equals("0"))
+            {
+                displayLabel.Text = displayLabel.Text;
+            }
+            else if (displayLabel.Text.Contains("-") && stringLenght > 1)
+            {
+                displayLabel.Text = displayLabel.Text.Substring(1, 1 - stringLength);
+            }
+            else
+            {
+                displayLabel.Text = "-" + displayLabel.Text;
+            }
         }
         private void equalButton_Click(object sender, EventArgs e)
         {
