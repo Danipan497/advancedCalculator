@@ -35,6 +35,7 @@ namespace advancedCalculator
         private Rectangle clearButtonOriginalRectangle;
         private Rectangle backspaceButtonOriginalRectangle;
         private Rectangle displayLabelOriginalRectangle;
+        private Rectangle calculationTrackRectangle;
         private Size originalFormSize;
 
         public Calculator()
@@ -69,6 +70,7 @@ namespace advancedCalculator
             clearButtonOriginalRectangle = new Rectangle(clearButton.Location.X, clearButton.Location.Y, clearButton.Width, clearButton.Height);
             backspaceButtonOriginalRectangle = new Rectangle(backspaceButton.Location.X, backspaceButton.Location.Y, backspaceButton.Width, backspaceButton.Height);
             displayLabelOriginalRectangle = new Rectangle(displayLabel.Location.X, displayLabel.Location.Y, displayLabel.Width, displayLabel.Height);
+            calculationTrackRectangle = new Rectangle(calculationTrack.Location.X, calculationTrack.Location.Y, calculationTrack.Width, calculationTrack.Height);
         }
 
         //Rectangle resize method.
@@ -95,6 +97,7 @@ namespace advancedCalculator
             resizeControl(clearButtonOriginalRectangle, clearButton);
             resizeControl(backspaceButtonOriginalRectangle, backspaceButton);
             resizeControl(displayLabelOriginalRectangle, displayLabel);
+            resizeControl(calculationTrackRectangle, calculationTrack);
         }
 
         //Resize equations.
@@ -211,6 +214,7 @@ namespace advancedCalculator
             num1 = float.Parse(displayLabel.Text);
             operation = '+';
             displayLabel.Text = "";
+            calculationTrack.Text = num1.ToString() + " + ";
         }
 
         private void minusButton_Click(object sender, EventArgs e)
@@ -218,6 +222,7 @@ namespace advancedCalculator
             num1 = float.Parse(displayLabel.Text);
             operation = '-';
             displayLabel.Text = "";
+            calculationTrack.Text = num1.ToString() + " - ";
         }
 
         private void multiplyButton_Click(object sender, EventArgs e)
@@ -225,12 +230,14 @@ namespace advancedCalculator
             num1 = float.Parse(displayLabel.Text);
             operation = '*';
             displayLabel.Text = "";
+            calculationTrack.Text = num1.ToString() + " * ";
         }
         private void divideButton_Click(object sender, EventArgs e)
         {
             num1 = float.Parse(displayLabel.Text);
             operation = '/';
             displayLabel.Text = "";
+            calculationTrack.Text = num1.ToString() + " / ";
         }
 
         private void squareRootButton_Click(object sender, EventArgs e)
@@ -268,18 +275,22 @@ namespace advancedCalculator
                     case '+':
                         num2 = float.Parse(displayLabel.Text);
                         result = num1 + num2;
+                        calculationTrack.Text = num1.ToString() + " + " + num2.ToString();
                         break;
                     case '-':
                         num2 = float.Parse(displayLabel.Text);
                         result = num1 - num2;
+                        calculationTrack.Text = num1.ToString() + " - " + num2.ToString();
                         break;
                     case '*':
                         num2 = float.Parse(displayLabel.Text);
                         result = num1 * num2;
+                        calculationTrack.Text = num1.ToString() + " * " + num2.ToString();
                         break;
                     case '/':
                         num2 = float.Parse(displayLabel.Text);
                         result = num1 / num2;
+                        calculationTrack.Text = num1.ToString() + " / " + num2.ToString();
                         break;
                     default:
                         break;
@@ -304,6 +315,7 @@ namespace advancedCalculator
         private void clearButton_Click(object sender, EventArgs e)
         {
             displayLabel.Text = "0";
+            calculationTrack.Text="";
             num1 = 0;
             num2 = 0;
             result = 0;
@@ -326,6 +338,10 @@ namespace advancedCalculator
         }
 
         private void displayLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void calculationTrack_Click(object sender, EventArgs e)
         {
 
         }

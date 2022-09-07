@@ -49,10 +49,12 @@
             this.clearButton = new System.Windows.Forms.Button();
             this.squareRootButton = new System.Windows.Forms.Button();
             this.displayLabel = new System.Windows.Forms.Label();
+            this.calculationTrack = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // zeroButton
             // 
+            this.zeroButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.zeroButton.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.zeroButton.Location = new System.Drawing.Point(176, 652);
             this.zeroButton.MinimumSize = new System.Drawing.Size(158, 114);
@@ -61,7 +63,7 @@
             this.zeroButton.Size = new System.Drawing.Size(158, 114);
             this.zeroButton.TabIndex = 0;
             this.zeroButton.Text = "0";
-            this.zeroButton.UseVisualStyleBackColor = true;
+            this.zeroButton.UseVisualStyleBackColor = false;
             this.zeroButton.Click += new System.EventHandler(this.zeroButton_Click);
             // 
             // plusMinusButton
@@ -92,6 +94,7 @@
             // 
             // equalButton
             // 
+            this.equalButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.equalButton.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.equalButton.Location = new System.Drawing.Point(504, 652);
             this.equalButton.MinimumSize = new System.Drawing.Size(158, 114);
@@ -100,11 +103,12 @@
             this.equalButton.Size = new System.Drawing.Size(158, 114);
             this.equalButton.TabIndex = 3;
             this.equalButton.Text = "=";
-            this.equalButton.UseVisualStyleBackColor = true;
+            this.equalButton.UseVisualStyleBackColor = false;
             this.equalButton.Click += new System.EventHandler(this.equalButton_Click);
             // 
             // oneButton
             // 
+            this.oneButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.oneButton.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.oneButton.Location = new System.Drawing.Point(12, 532);
             this.oneButton.MinimumSize = new System.Drawing.Size(158, 114);
@@ -113,11 +117,12 @@
             this.oneButton.Size = new System.Drawing.Size(158, 114);
             this.oneButton.TabIndex = 4;
             this.oneButton.Text = "1";
-            this.oneButton.UseVisualStyleBackColor = true;
+            this.oneButton.UseVisualStyleBackColor = false;
             this.oneButton.Click += new System.EventHandler(this.oneButton_Click);
             // 
             // twoButton
             // 
+            this.twoButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.twoButton.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.twoButton.Location = new System.Drawing.Point(176, 532);
             this.twoButton.MinimumSize = new System.Drawing.Size(158, 114);
@@ -126,11 +131,12 @@
             this.twoButton.Size = new System.Drawing.Size(158, 114);
             this.twoButton.TabIndex = 5;
             this.twoButton.Text = "2";
-            this.twoButton.UseVisualStyleBackColor = true;
+            this.twoButton.UseVisualStyleBackColor = false;
             this.twoButton.Click += new System.EventHandler(this.twoButton_Click);
             // 
             // threeButton
             // 
+            this.threeButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.threeButton.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.threeButton.Location = new System.Drawing.Point(340, 532);
             this.threeButton.MinimumSize = new System.Drawing.Size(158, 114);
@@ -139,7 +145,7 @@
             this.threeButton.Size = new System.Drawing.Size(158, 114);
             this.threeButton.TabIndex = 6;
             this.threeButton.Text = "3";
-            this.threeButton.UseVisualStyleBackColor = true;
+            this.threeButton.UseVisualStyleBackColor = false;
             this.threeButton.Click += new System.EventHandler(this.threeButton_Click);
             // 
             // plusButton
@@ -170,6 +176,7 @@
             // 
             // sixButton
             // 
+            this.sixButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.sixButton.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sixButton.Location = new System.Drawing.Point(340, 412);
             this.sixButton.MinimumSize = new System.Drawing.Size(158, 114);
@@ -178,11 +185,12 @@
             this.sixButton.Size = new System.Drawing.Size(158, 114);
             this.sixButton.TabIndex = 10;
             this.sixButton.Text = "6";
-            this.sixButton.UseVisualStyleBackColor = true;
+            this.sixButton.UseVisualStyleBackColor = false;
             this.sixButton.Click += new System.EventHandler(this.sixButton_Click);
             // 
             // fiveButton
             // 
+            this.fiveButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.fiveButton.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.fiveButton.Location = new System.Drawing.Point(176, 412);
             this.fiveButton.MinimumSize = new System.Drawing.Size(158, 114);
@@ -191,11 +199,12 @@
             this.fiveButton.Size = new System.Drawing.Size(158, 114);
             this.fiveButton.TabIndex = 9;
             this.fiveButton.Text = "5";
-            this.fiveButton.UseVisualStyleBackColor = true;
+            this.fiveButton.UseVisualStyleBackColor = false;
             this.fiveButton.Click += new System.EventHandler(this.fiveButton_Click);
             // 
             // fourButton
             // 
+            this.fourButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.fourButton.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.fourButton.Location = new System.Drawing.Point(12, 412);
             this.fourButton.MinimumSize = new System.Drawing.Size(158, 114);
@@ -204,7 +213,7 @@
             this.fourButton.Size = new System.Drawing.Size(158, 114);
             this.fourButton.TabIndex = 8;
             this.fourButton.Text = "4";
-            this.fourButton.UseVisualStyleBackColor = true;
+            this.fourButton.UseVisualStyleBackColor = false;
             this.fourButton.Click += new System.EventHandler(this.fourButton_Click);
             // 
             // multiplyButton
@@ -222,6 +231,7 @@
             // 
             // nineButton
             // 
+            this.nineButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.nineButton.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.nineButton.Location = new System.Drawing.Point(340, 292);
             this.nineButton.MinimumSize = new System.Drawing.Size(158, 114);
@@ -230,11 +240,12 @@
             this.nineButton.Size = new System.Drawing.Size(158, 114);
             this.nineButton.TabIndex = 14;
             this.nineButton.Text = "9";
-            this.nineButton.UseVisualStyleBackColor = true;
+            this.nineButton.UseVisualStyleBackColor = false;
             this.nineButton.Click += new System.EventHandler(this.nineButton_Click);
             // 
             // eightButton
             // 
+            this.eightButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.eightButton.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.eightButton.Location = new System.Drawing.Point(176, 292);
             this.eightButton.MinimumSize = new System.Drawing.Size(158, 114);
@@ -243,11 +254,12 @@
             this.eightButton.Size = new System.Drawing.Size(158, 114);
             this.eightButton.TabIndex = 13;
             this.eightButton.Text = "8";
-            this.eightButton.UseVisualStyleBackColor = true;
+            this.eightButton.UseVisualStyleBackColor = false;
             this.eightButton.Click += new System.EventHandler(this.eightButton_Click);
             // 
             // sevenButton
             // 
+            this.sevenButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.sevenButton.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sevenButton.Location = new System.Drawing.Point(12, 292);
             this.sevenButton.MinimumSize = new System.Drawing.Size(158, 114);
@@ -256,7 +268,7 @@
             this.sevenButton.Size = new System.Drawing.Size(158, 114);
             this.sevenButton.TabIndex = 12;
             this.sevenButton.Text = "7";
-            this.sevenButton.UseVisualStyleBackColor = true;
+            this.sevenButton.UseVisualStyleBackColor = false;
             this.sevenButton.Click += new System.EventHandler(this.sevenButton_Click);
             // 
             // divideButton
@@ -316,19 +328,31 @@
             this.displayLabel.BackColor = System.Drawing.SystemColors.InfoText;
             this.displayLabel.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.displayLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.displayLabel.Location = new System.Drawing.Point(12, 9);
+            this.displayLabel.Location = new System.Drawing.Point(12, 57);
             this.displayLabel.Name = "displayLabel";
-            this.displayLabel.Size = new System.Drawing.Size(650, 160);
+            this.displayLabel.Size = new System.Drawing.Size(650, 112);
             this.displayLabel.TabIndex = 20;
             this.displayLabel.Text = "0";
             this.displayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.displayLabel.Click += new System.EventHandler(this.displayLabel_Click);
+            // 
+            // calculationTrack
+            // 
+            this.calculationTrack.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.calculationTrack.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.calculationTrack.Location = new System.Drawing.Point(12, 9);
+            this.calculationTrack.Name = "calculationTrack";
+            this.calculationTrack.Size = new System.Drawing.Size(650, 54);
+            this.calculationTrack.TabIndex = 21;
+            this.calculationTrack.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.calculationTrack.Click += new System.EventHandler(this.calculationTrack_Click);
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 778);
+            this.Controls.Add(this.calculationTrack);
             this.Controls.Add(this.displayLabel);
             this.Controls.Add(this.divideButton);
             this.Controls.Add(this.backspaceButton);
@@ -385,5 +409,6 @@
         private Button clearButton;
         private Button squareRootButton;
         private Label displayLabel;
+        private Label calculationTrack;
     }
 }
