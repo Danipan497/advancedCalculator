@@ -211,10 +211,10 @@ namespace advancedCalculator
 
         private void plusButton_Click(object sender, EventArgs e)
         {
-            num1 = float.Parse(displayLabel.Text);
-            operation = '+';
-            displayLabel.Text = "";
-            calculationTrack.Text = num1.ToString() + " + ";
+                num1 = float.Parse(displayLabel.Text);
+                operation = '+';
+                displayLabel.Text = "";
+                calculationTrack.Text = num1.ToString() + " + ";
         }
 
         private void minusButton_Click(object sender, EventArgs e)
