@@ -1,2 +1,2 @@
 # advancedCalculator
- SImple calculator with scaling graphic interface.
+ Simple calculator with scaling graphic interface.
